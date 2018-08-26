@@ -15,6 +15,9 @@ final class Game implements GameInterface
     /** @var GameAction $action */
     private $action;
 
+    /** @var array $input Input lines */
+    private $input = [];
+
     /**
      * Game constructor.
      */
@@ -30,8 +33,14 @@ final class Game implements GameInterface
      */
     public function newTurn(): void
     {
-        //~ Start global time after reading first information (waiting for opponent turn)
+        //~ First input
+        $this->input[] = Input::read('%s');
+
+        //~ Start global time after reading first information (waiting for opponent turn when have opponent.)
         Timer::start();
+
+        //~ Read another line...
+        $this->input = Input::read('%s');
     }
 
     /**
@@ -39,25 +48,10 @@ final class Game implements GameInterface
      */
     public function runTurn(): void
     {
-        list($start) = Input::read('%s');
-        list($end)   = Input::read('%s');
+        //~ Do something here.
 
-        $dateStart = \DateTimeImmutable::createFromFormat('d.m.Y', $start);
-        $dateEnd   = \DateTimeImmutable::createFromFormat('d.m.Y', $end);
-
-        $dateInterval = $dateEnd->diff($dateStart);
-
-        $output = [];
-        if ($dateInterval->y > 0) {
-            $output[] = $dateInterval->y . ' year' . ($dateInterval->y !== 1 ? 's' : '');
-        }
-        if ($dateInterval->m > 0) {
-            $output[] = $dateInterval->m . ' month' . ($dateInterval->m !== 1 ? 's' : '');
-        }
-
-        $output[] = 'total ' . $dateInterval->days . ' day' . ($dateInterval->days !== 1 ? 's' : '');
-
-        $this->action->add($output, ', ');
+        //~ Add game action for output
+        $this->action->add('SOMETHING');
     }
 
     /**

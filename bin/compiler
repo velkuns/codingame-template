@@ -14,17 +14,6 @@ use Velkuns\Codingame\Core\Compiler\Compiler;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$config = [
-    'gameLoop'  => false,
-    'copyright' => 'Romain Cottard',
-    'dist'      => '/dist/codingame.php',
-    'src'       => [
-        '/src',
-        '/vendor/velkuns/codingame-core/src'
-    ],
-    'exclude'   => [
-        '/vendor/velkuns/codingame-core/src/Compiler'
-    ],
-];
+$config = include_once __DIR__ . '/../config/compiler.php';
 
 (new Compiler(__DIR__ . '/..', $config))->run();
