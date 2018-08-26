@@ -8,8 +8,8 @@ Codingame - Template Game / Puzzle
 ## Download
 You can get the last version of this project template, here: [https://github.com/velkuns/codingame-template/releases](Release)
 Or just click on this link, to download latest release:
-[Latest `zip`](https://github.com/velkuns/codingame-template/archive/1.0.0.zip)
-[Latest `tar.gz`](https://github.com/velkuns/codingame-template/archive/1.0.0.tar.gz)
+[Latest `zip`](https://github.com/velkuns/codingame-template/archive/1.0.1.zip)
+[Latest `tar.gz`](https://github.com/velkuns/codingame-template/archive/1.0.1.tar.gz)
 
 ## Installation
 Extract files in the directory of your choice.
