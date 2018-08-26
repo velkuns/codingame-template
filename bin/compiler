@@ -1,0 +1,30 @@
+#!/usr/bin/env php
+<?php
+
+/*
+ * Copyright (c) Romain Cottard
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Velkuns\Codingame\Bin;
+
+use Velkuns\Codingame\Core\Compiler\Compiler;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$config = [
+    'gameLoop'  => false,
+    'copyright' => 'Romain Cottard',
+    'dist'      => '/dist/codingame.php',
+    'src'       => [
+        '/src',
+        '/vendor/velkuns/codingame-core/src'
+    ],
+    'exclude'   => [
+        '/vendor/velkuns/codingame-core/src/Compiler'
+    ],
+];
+
+(new Compiler(__DIR__ . '/..', $config))->run();
