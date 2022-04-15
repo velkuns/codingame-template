@@ -1,0 +1,18 @@
+{
+  "hasGameLoop": false,
+
+  "copyright": "Romain Cottard",
+
+  "dist": "/dist/codingame.php",
+
+  "sources": [
+    "/src",
+    "/vendor/velkuns/codingame-core-game/src",
+    "/vendor/velkuns/codingame-core-utils/src"
+  ],
+
+  "excludes": [
+    "/src/Compiler",
+    "/src/Config"
+  ]
+}

@@ -6,8 +6,8 @@ composer.lock
 #~ Tests
 /build/*
 .phpunit.result.cache
-/tests/Generated/*
-!/tests/Generated/.gitkeep
+/dist/*
+!/dist/.gitkeep
 
 #~ Misc
 .idea

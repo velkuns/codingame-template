@@ -11,9 +11,9 @@
 namespace Velkuns\Codingame\Bin;
 
 use Velkuns\Codingame\Core\Compiler\Compiler;
+use Velkuns\Codingame\Core\Compiler\Config;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$config = include_once __DIR__ . '/../config/compiler.php';
-
-(new Compiler(__DIR__ . '/..', $config))->run();
+$rootDir = realpath(__DIR__ . '/..');
+(new Compiler($rootDir, (new Config())->load($rootDir . '/config/compiler.json')))->run();

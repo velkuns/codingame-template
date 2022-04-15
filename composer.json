@@ -21,13 +21,23 @@
   "repositories": [
     {
       "type": "github",
-      "url": "https://github.com/velkuns/codingame-core"
+      "url": "https://github.com/velkuns/codingame-core-game"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/velkuns/codingame-core-compiler"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/velkuns/codingame-core-utils"
     }
   ],
 
   "require": {
     "php": "7.3.*|7.4.*|8.0.*|8.1.*",
-    "velkuns/codingame-core": "^1.6"
+    "velkuns/codingame-core-game": "dev-main",
+    "velkuns/codingame-core-compiler": "dev-main",
+    "velkuns/codingame-core-utils": "dev-main"
   },
 
   "require-dev": {

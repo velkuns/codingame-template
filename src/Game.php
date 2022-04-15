@@ -7,12 +7,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Application\Game;
+namespace Application;
 
 use Velkuns\Codingame\Core\Game\GameAction;
 use Velkuns\Codingame\Core\Game\GameInterface;
 use Velkuns\Codingame\Core\IO\Input;
 use Velkuns\Codingame\Core\IO\Output;
+use Velkuns\Codingame\Core\Utils\Logger;
 use Velkuns\Codingame\Core\Utils\Timer;
 
 final class Game implements GameInterface
@@ -20,8 +21,17 @@ final class Game implements GameInterface
     /** @var GameAction $action */
     private $action;
 
-    /** @var array<string|int|float|array<string|int|float>> $input Input lines */
-    private $input = [];
+    /** @var Input $input */
+    private $input;
+
+    /** @var Output $output */
+    private $output;
+
+    /** @var Timer timer */
+    private $timer;
+
+    /** @var array<string|int|float|array<string|int|float>> $data Input lines */
+    private $data = [];
 
     /**
      * Game constructor.
@@ -29,6 +39,9 @@ final class Game implements GameInterface
     public function __construct()
     {
         $this->action = new GameAction();
+        $this->input  = new Input();
+        $this->output = new Output();
+        $this->timer  = new Timer(new Logger());
     }
 
     /**
@@ -39,13 +52,13 @@ final class Game implements GameInterface
     public function newTurn(): void
     {
         //~ First input
-        $this->input[] = Input::read('%s');
+        $this->data[] = $this->input->readString();
 
         //~ Start global time after reading first information (waiting for opponent turn when have opponent.)
-        Timer::start();
+        $this->timer->start();
 
         //~ Read another line...
-        $this->input = Input::read('%s');
+        $this->data[] = $this->input->readString();
     }
 
     /**
@@ -64,7 +77,7 @@ final class Game implements GameInterface
      */
     public function endTurn(): void
     {
-        Output::write((string) $this->action);
-        Timer::display();
+        $this->output->write((string) $this->action);
+        $this->timer->display();
     }
 }
