@@ -12,17 +12,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Removed
 ```
 
-## [1.1.0] - 2022-04-15
-[1.1.0]: https://github.com/velkuns/codingame-template/compare/1.0.1...1.1.0
+## [2.0.0] - 2022-04-15
+[2.0.0]: https://github.com/velkuns/codingame-template/compare/1.0.1...2.0.0
 ### Changed
  * Now compatible with PHP 7.3 to 8.1
  * Fix phpdoc + some return type according to phpstan analysis
  * Change the Default namespace
+ * Some minor refactoring in main Game.php
 ### Added
  * phpstan for static analysis
  * Makefile
  * CI config
  * GitHub workflow for CI
+ * Add new dependencies (core game, core utils & core compiler)
+### Removed
+ * Old dependency (core)
 
 
 ## [1.0.1] - 2018-08-26
