@@ -9,4 +9,4 @@ parameters:
     - ./vendor/autoload.php
 
   ignoreErrors:
-    - '`Property Velkuns\\Codingame\\Template\\Game\\Game::\$input is never read, only written.`'
+    - '`Property (.+?)\\Game::\$input is never read, only written.`'

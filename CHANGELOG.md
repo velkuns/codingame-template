@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
  * Now compatible with PHP 7.3 to 8.1
  * Fix phpdoc + some return type according to phpstan analysis
+ * Change the Default namespace
 ### Added
  * phpstan for static analysis
  * Makefile

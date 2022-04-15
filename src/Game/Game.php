@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Velkuns\Codingame\Template\Game;
+namespace Application\Game;
 
 use Velkuns\Codingame\Core\Game\GameAction;
 use Velkuns\Codingame\Core\Game\GameInterface;

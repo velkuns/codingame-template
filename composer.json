@@ -13,8 +13,8 @@
 
   "autoload": {
     "psr-4": {
-      "Velkuns\\Codingame\\Template\\": "./src",
-      "Velkuns\\Codingame\\Template\\Tests\\": "./tests"
+      "Application\\": "./src",
+      "Application\\Tests\\": "./tests"
     }
   },
 
