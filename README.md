@@ -2,14 +2,14 @@
 Codingame - Template Game / Puzzle
 
 ## Requirement
-- PHP 7.2+ (Like on codingame)
+- PHP 7.3.+ (Like on codingame)
 - composer
 
 ## Download
 You can get the last version of this project template, here: [https://github.com/velkuns/codingame-template/releases](Release)
-Or just click on this link, to download latest release:
-[Latest `zip`](https://github.com/velkuns/codingame-template/archive/1.0.1.zip)
-[Latest `tar.gz`](https://github.com/velkuns/codingame-template/archive/1.0.1.tar.gz)
+Or just click on this link, to download the latest release:
+[Latest `zip`](https://github.com/velkuns/codingame-template/archive/1.1.0.zip)
+[Latest `tar.gz`](https://github.com/velkuns/codingame-template/archive/1.1.0.tar.gz)
 
 ## Installation
 Extract files in the directory of your choice.
@@ -47,4 +47,3 @@ Checking syntax: ... OK
 
 Compiler read source code (according to the config) and put it in one single file (default: dist/codingame.php)
 With chrome extensions, this file can be automatically sync on codingame.com
-

@@ -20,7 +20,7 @@ final class Game implements GameInterface
     /** @var GameAction $action */
     private $action;
 
-    /** @var array $input Input lines */
+    /** @var array<string|int|float|array<string|int|float>> $input Input lines */
     private $input = [];
 
     /**

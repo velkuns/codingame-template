@@ -1,5 +1,17 @@
+#~ Composer
 composer.phar
-/vendor/
 composer.lock
+/vendor/
 
-/.idea/
+#~ Tests
+/build/*
+.phpunit.result.cache
+/tests/Generated/*
+!/tests/Generated/.gitkeep
+
+#~ Misc
+.idea
+
+#~ Overridden condigs
+phpstan.neon
+phpunit.xml

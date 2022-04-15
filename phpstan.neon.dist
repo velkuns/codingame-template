@@ -1,0 +1,12 @@
+parameters:
+  phpVersion: 70300 # PHP 7.3 - Current minimal version supported
+  level: max
+  paths:
+    - ./src
+    - ./tests
+
+  bootstrapFiles:
+    - ./vendor/autoload.php
+
+  ignoreErrors:
+    - '`Property Velkuns\\Codingame\\Template\\Game\\Game::\$input is never read, only written.`'
