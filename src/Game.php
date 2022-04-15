@@ -42,6 +42,14 @@ final class Game implements GameInterface
         $this->input  = new Input();
         $this->output = new Output();
         $this->timer  = new Timer(new Logger());
+
+        //~ Initialize the game. Not necessary if game have no initialization inputs
+        $this->init();
+    }
+
+    private function init(): void
+    {
+        //~ Read some initial values
     }
 
     /**
@@ -56,9 +64,6 @@ final class Game implements GameInterface
 
         //~ Start global time after reading first information (waiting for opponent turn when have opponent.)
         $this->timer->start();
-
-        //~ Read another line...
-        $this->data[] = $this->input->readString();
     }
 
     /**
@@ -78,6 +83,8 @@ final class Game implements GameInterface
     public function endTurn(): void
     {
         $this->output->write((string) $this->action);
+        $this->action->reset(); // Reset actions after writing them
+
         $this->timer->display();
     }
 }

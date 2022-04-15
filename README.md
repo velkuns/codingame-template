@@ -30,18 +30,21 @@ You can add your code in `src/` directory.
 
 ### Rules
 * You `MUST` name you main game class `Game` and `MUST` be implement `GameInterface`
-* You `MUST` use full `use My\Namespace\For\Class;` in your classes files (will be remove by the compiler)
+* You `MUST` use full `use My\Namespace\For\Class;` in your classes files (will be removed by the compiler)
 * Sometimes, Codingame cannot resolve correctly the dependencies in correct order. So be careful with that.
 * Compiler remove header file, according to the given format.
 
 
 ## Compilation
+
+Configuration of compiler (game running in a loop ?, source code to inclure or exclude...) is set in
+`config/compiler.json`.
+
 To "compile" classes into one single file for codingame puzzle / game, you need to execute compiler.
 
 ```bash
 ~/codingame-template$ bin/compiler
 Compiling: ... done
-Writing: ... done
 Checking syntax: ... OK
 ```
 

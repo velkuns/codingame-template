@@ -35,9 +35,9 @@
 
   "require": {
     "php": "7.3.*|7.4.*|8.0.*|8.1.*",
-    "velkuns/codingame-core-game": "dev-main",
-    "velkuns/codingame-core-compiler": "dev-main",
-    "velkuns/codingame-core-utils": "dev-main"
+    "velkuns/codingame-core-compiler": "^1.0",
+    "velkuns/codingame-core-game": "^1.0",
+    "velkuns/codingame-core-utils": "^1.0"
   },
 
   "require-dev": {
